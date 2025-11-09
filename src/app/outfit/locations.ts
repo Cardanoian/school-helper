@@ -1,0 +1,1974 @@
+export type ProvinceLocation = {
+  id: string;
+  label: string;
+  latitude: number;
+  longitude: number;
+  nx: number;
+  ny: number;
+};
+
+export type ProvinceDefinition = {
+  id: string;
+  label: string;
+  locations: readonly ProvinceLocation[];
+};
+
+export const KOREA_PROVINCES = [
+  {
+    "id": "seoul",
+    "label": "서울특별시",
+    "locations": [
+      {
+        "id": "seoul-종로구",
+        "label": "종로구",
+        "latitude": 37.570378,
+        "longitude": 126.981642,
+        "nx": 60,
+        "ny": 127
+      },
+      {
+        "id": "seoul-중구",
+        "label": "중구",
+        "latitude": 37.561003,
+        "longitude": 126.999642,
+        "nx": 60,
+        "ny": 127
+      },
+      {
+        "id": "seoul-용산구",
+        "label": "용산구",
+        "latitude": 37.536094,
+        "longitude": 126.967522,
+        "nx": 60,
+        "ny": 126
+      },
+      {
+        "id": "seoul-성동구",
+        "label": "성동구",
+        "latitude": 37.560611,
+        "longitude": 127.039,
+        "nx": 61,
+        "ny": 127
+      },
+      {
+        "id": "seoul-광진구",
+        "label": "광진구",
+        "latitude": 37.535739,
+        "longitude": 127.084533,
+        "nx": 62,
+        "ny": 126
+      },
+      {
+        "id": "seoul-동대문구",
+        "label": "동대문구",
+        "latitude": 37.571625,
+        "longitude": 127.042142,
+        "nx": 61,
+        "ny": 127
+      },
+      {
+        "id": "seoul-중랑구",
+        "label": "중랑구",
+        "latitude": 37.603806,
+        "longitude": 127.094778,
+        "nx": 62,
+        "ny": 128
+      },
+      {
+        "id": "seoul-성북구",
+        "label": "성북구",
+        "latitude": 37.586383,
+        "longitude": 127.020333,
+        "nx": 61,
+        "ny": 127
+      },
+      {
+        "id": "seoul-강북구",
+        "label": "강북구",
+        "latitude": 37.636956,
+        "longitude": 127.027719,
+        "nx": 61,
+        "ny": 128
+      },
+      {
+        "id": "seoul-도봉구",
+        "label": "도봉구",
+        "latitude": 37.665833,
+        "longitude": 127.049522,
+        "nx": 61,
+        "ny": 129
+      },
+      {
+        "id": "seoul-노원구",
+        "label": "노원구",
+        "latitude": 37.651461,
+        "longitude": 127.058389,
+        "nx": 61,
+        "ny": 129
+      },
+      {
+        "id": "seoul-은평구",
+        "label": "은평구",
+        "latitude": 37.599969,
+        "longitude": 126.931242,
+        "nx": 59,
+        "ny": 127
+      },
+      {
+        "id": "seoul-서대문구",
+        "label": "서대문구",
+        "latitude": 37.576367,
+        "longitude": 126.938897,
+        "nx": 59,
+        "ny": 127
+      },
+      {
+        "id": "seoul-마포구",
+        "label": "마포구",
+        "latitude": 37.560706,
+        "longitude": 126.910531,
+        "nx": 59,
+        "ny": 127
+      },
+      {
+        "id": "seoul-양천구",
+        "label": "양천구",
+        "latitude": 37.514231,
+        "longitude": 126.868708,
+        "nx": 58,
+        "ny": 126
+      },
+      {
+        "id": "seoul-강서구",
+        "label": "강서구",
+        "latitude": 37.548156,
+        "longitude": 126.851675,
+        "nx": 58,
+        "ny": 126
+      },
+      {
+        "id": "seoul-구로구",
+        "label": "구로구",
+        "latitude": 37.49265,
+        "longitude": 126.889597,
+        "nx": 58,
+        "ny": 125
+      },
+      {
+        "id": "seoul-금천구",
+        "label": "금천구",
+        "latitude": 37.449108,
+        "longitude": 126.904197,
+        "nx": 59,
+        "ny": 124
+      },
+      {
+        "id": "seoul-영등포구",
+        "label": "영등포구",
+        "latitude": 37.523611,
+        "longitude": 126.898342,
+        "nx": 58,
+        "ny": 126
+      },
+      {
+        "id": "seoul-동작구",
+        "label": "동작구",
+        "latitude": 37.509656,
+        "longitude": 126.941575,
+        "nx": 59,
+        "ny": 125
+      },
+      {
+        "id": "seoul-관악구",
+        "label": "관악구",
+        "latitude": 37.475386,
+        "longitude": 126.953844,
+        "nx": 59,
+        "ny": 125
+      },
+      {
+        "id": "seoul-서초구",
+        "label": "서초구",
+        "latitude": 37.480786,
+        "longitude": 127.034811,
+        "nx": 61,
+        "ny": 125
+      },
+      {
+        "id": "seoul-강남구",
+        "label": "강남구",
+        "latitude": 37.514575,
+        "longitude": 127.049556,
+        "nx": 61,
+        "ny": 126
+      },
+      {
+        "id": "seoul-송파구",
+        "label": "송파구",
+        "latitude": 37.511756,
+        "longitude": 127.107931,
+        "nx": 62,
+        "ny": 126
+      },
+      {
+        "id": "seoul-강동구",
+        "label": "강동구",
+        "latitude": 37.527367,
+        "longitude": 127.125864,
+        "nx": 62,
+        "ny": 126
+      }
+    ]
+  },
+  {
+    "id": "busan",
+    "label": "부산광역시",
+    "locations": [
+      {
+        "id": "busan-중구",
+        "label": "중구",
+        "latitude": 35.103217,
+        "longitude": 129.034508,
+        "nx": 97,
+        "ny": 74
+      },
+      {
+        "id": "busan-서구",
+        "label": "서구",
+        "latitude": 35.094836,
+        "longitude": 129.026378,
+        "nx": 97,
+        "ny": 74
+      },
+      {
+        "id": "busan-동구",
+        "label": "동구",
+        "latitude": 35.135894,
+        "longitude": 129.059175,
+        "nx": 98,
+        "ny": 75
+      },
+      {
+        "id": "busan-영도구",
+        "label": "영도구",
+        "latitude": 35.088117,
+        "longitude": 129.070186,
+        "nx": 98,
+        "ny": 74
+      },
+      {
+        "id": "busan-부산진구",
+        "label": "부산진구",
+        "latitude": 35.159953,
+        "longitude": 129.055319,
+        "nx": 97,
+        "ny": 75
+      },
+      {
+        "id": "busan-동래구",
+        "label": "동래구",
+        "latitude": 35.201872,
+        "longitude": 129.085856,
+        "nx": 98,
+        "ny": 76
+      },
+      {
+        "id": "busan-남구",
+        "label": "남구",
+        "latitude": 35.133408,
+        "longitude": 129.0865,
+        "nx": 98,
+        "ny": 75
+      },
+      {
+        "id": "busan-북구",
+        "label": "북구",
+        "latitude": 35.194181,
+        "longitude": 128.992475,
+        "nx": 96,
+        "ny": 76
+      },
+      {
+        "id": "busan-해운대구",
+        "label": "해운대구",
+        "latitude": 35.160019,
+        "longitude": 129.165808,
+        "nx": 99,
+        "ny": 75
+      },
+      {
+        "id": "busan-사하구",
+        "label": "사하구",
+        "latitude": 35.101428,
+        "longitude": 128.977042,
+        "nx": 96,
+        "ny": 74
+      },
+      {
+        "id": "busan-금정구",
+        "label": "금정구",
+        "latitude": 35.240078,
+        "longitude": 129.094319,
+        "nx": 98,
+        "ny": 77
+      },
+      {
+        "id": "busan-강서구",
+        "label": "강서구",
+        "latitude": 35.209164,
+        "longitude": 128.982908,
+        "nx": 96,
+        "ny": 76
+      },
+      {
+        "id": "busan-연제구",
+        "label": "연제구",
+        "latitude": 35.173186,
+        "longitude": 129.082075,
+        "nx": 98,
+        "ny": 76
+      },
+      {
+        "id": "busan-수영구",
+        "label": "수영구",
+        "latitude": 35.142467,
+        "longitude": 129.115375,
+        "nx": 99,
+        "ny": 75
+      },
+      {
+        "id": "busan-사상구",
+        "label": "사상구",
+        "latitude": 35.149467,
+        "longitude": 128.993333,
+        "nx": 96,
+        "ny": 75
+      },
+      {
+        "id": "busan-기장군",
+        "label": "기장군",
+        "latitude": 35.244775,
+        "longitude": 129.222287,
+        "nx": 100,
+        "ny": 77
+      }
+    ]
+  },
+  {
+    "id": "daegu",
+    "label": "대구광역시",
+    "locations": [
+      {
+        "id": "daegu-중구",
+        "label": "중구",
+        "latitude": 35.869527,
+        "longitude": 128.606175,
+        "nx": 89,
+        "ny": 90
+      },
+      {
+        "id": "daegu-동구",
+        "label": "동구",
+        "latitude": 35.886827,
+        "longitude": 128.635558,
+        "nx": 89,
+        "ny": 91
+      },
+      {
+        "id": "daegu-서구",
+        "label": "서구",
+        "latitude": 35.871941,
+        "longitude": 128.55916,
+        "nx": 88,
+        "ny": 91
+      },
+      {
+        "id": "daegu-남구",
+        "label": "남구",
+        "latitude": 35.846214,
+        "longitude": 128.597702,
+        "nx": 89,
+        "ny": 90
+      },
+      {
+        "id": "daegu-북구",
+        "label": "북구",
+        "latitude": 35.885865,
+        "longitude": 128.582892,
+        "nx": 89,
+        "ny": 91
+      },
+      {
+        "id": "daegu-수성구",
+        "label": "수성구",
+        "latitude": 35.855208,
+        "longitude": 128.632867,
+        "nx": 89,
+        "ny": 90
+      },
+      {
+        "id": "daegu-달서구",
+        "label": "달서구",
+        "latitude": 35.826928,
+        "longitude": 128.535064,
+        "nx": 88,
+        "ny": 90
+      },
+      {
+        "id": "daegu-달성군",
+        "label": "달성군",
+        "latitude": 35.77475,
+        "longitude": 128.431399,
+        "nx": 86,
+        "ny": 88
+      }
+    ]
+  },
+  {
+    "id": "incheon",
+    "label": "인천광역시",
+    "locations": [
+      {
+        "id": "incheon-중구",
+        "label": "중구",
+        "latitude": 37.473848,
+        "longitude": 126.621762,
+        "nx": 54,
+        "ny": 125
+      },
+      {
+        "id": "incheon-동구",
+        "label": "동구",
+        "latitude": 37.474016,
+        "longitude": 126.643244,
+        "nx": 54,
+        "ny": 125
+      },
+      {
+        "id": "incheon-미추홀구",
+        "label": "미추홀구",
+        "latitude": 37.463692,
+        "longitude": 126.650297,
+        "nx": 54,
+        "ny": 124
+      },
+      {
+        "id": "incheon-연수구",
+        "label": "연수구",
+        "latitude": 37.410381,
+        "longitude": 126.678266,
+        "nx": 55,
+        "ny": 123
+      },
+      {
+        "id": "incheon-남동구",
+        "label": "남동구",
+        "latitude": 37.449711,
+        "longitude": 126.730967,
+        "nx": 56,
+        "ny": 124
+      },
+      {
+        "id": "incheon-부평구",
+        "label": "부평구",
+        "latitude": 37.507842,
+        "longitude": 126.721907,
+        "nx": 55,
+        "ny": 125
+      },
+      {
+        "id": "incheon-계양구",
+        "label": "계양구",
+        "latitude": 37.537707,
+        "longitude": 126.737744,
+        "nx": 56,
+        "ny": 126
+      },
+      {
+        "id": "incheon-서구",
+        "label": "서구",
+        "latitude": 37.545464,
+        "longitude": 126.675962,
+        "nx": 55,
+        "ny": 126
+      },
+      {
+        "id": "incheon-강화군",
+        "label": "강화군",
+        "latitude": 37.743858,
+        "longitude": 126.49,
+        "nx": 51,
+        "ny": 130
+      },
+      {
+        "id": "incheon-옹진군",
+        "label": "옹진군",
+        "latitude": 37.443725,
+        "longitude": 126.638889,
+        "nx": 54,
+        "ny": 124
+      }
+    ]
+  },
+  {
+    "id": "gwangju",
+    "label": "광주광역시",
+    "locations": [
+      {
+        "id": "gwangju-동구",
+        "label": "동구",
+        "latitude": 35.146278,
+        "longitude": 126.92309,
+        "nx": 59,
+        "ny": 74
+      },
+      {
+        "id": "gwangju-서구",
+        "label": "서구",
+        "latitude": 35.152516,
+        "longitude": 126.889506,
+        "nx": 59,
+        "ny": 74
+      },
+      {
+        "id": "gwangju-남구",
+        "label": "남구",
+        "latitude": 35.133017,
+        "longitude": 126.902557,
+        "nx": 59,
+        "ny": 74
+      },
+      {
+        "id": "gwangju-북구",
+        "label": "북구",
+        "latitude": 35.181214,
+        "longitude": 126.901081,
+        "nx": 59,
+        "ny": 75
+      },
+      {
+        "id": "gwangju-광산구",
+        "label": "광산구",
+        "latitude": 35.139958,
+        "longitude": 126.793668,
+        "nx": 57,
+        "ny": 74
+      }
+    ]
+  },
+  {
+    "id": "daejeon",
+    "label": "대전광역시",
+    "locations": [
+      {
+        "id": "daejeon-동구",
+        "label": "동구",
+        "latitude": 36.31204,
+        "longitude": 127.45486,
+        "nx": 68,
+        "ny": 100
+      },
+      {
+        "id": "daejeon-중구",
+        "label": "중구",
+        "latitude": 36.32583,
+        "longitude": 127.421381,
+        "nx": 68,
+        "ny": 100
+      },
+      {
+        "id": "daejeon-서구",
+        "label": "서구",
+        "latitude": 36.357073,
+        "longitude": 127.383416,
+        "nx": 67,
+        "ny": 101
+      },
+      {
+        "id": "daejeon-유성구",
+        "label": "유성구",
+        "latitude": 36.364056,
+        "longitude": 127.356136,
+        "nx": 67,
+        "ny": 101
+      },
+      {
+        "id": "daejeon-대덕구",
+        "label": "대덕구",
+        "latitude": 36.352184,
+        "longitude": 127.417093,
+        "nx": 68,
+        "ny": 100
+      }
+    ]
+  },
+  {
+    "id": "ulsan",
+    "label": "울산광역시",
+    "locations": [
+      {
+        "id": "ulsan-중구",
+        "label": "중구",
+        "latitude": 35.569712,
+        "longitude": 129.332816,
+        "nx": 102,
+        "ny": 84
+      },
+      {
+        "id": "ulsan-남구",
+        "label": "남구",
+        "latitude": 35.544043,
+        "longitude": 129.330175,
+        "nx": 102,
+        "ny": 84
+      },
+      {
+        "id": "ulsan-동구",
+        "label": "동구",
+        "latitude": 35.50517,
+        "longitude": 129.416692,
+        "nx": 104,
+        "ny": 83
+      },
+      {
+        "id": "ulsan-북구",
+        "label": "북구",
+        "latitude": 35.582708,
+        "longitude": 129.361245,
+        "nx": 103,
+        "ny": 85
+      },
+      {
+        "id": "ulsan-울주군",
+        "label": "울주군",
+        "latitude": 35.522306,
+        "longitude": 129.242475,
+        "nx": 101,
+        "ny": 83
+      }
+    ]
+  },
+  {
+    "id": "sejong",
+    "label": "세종특별자치시",
+    "locations": [
+      {
+        "id": "sejong-세종특별자치시",
+        "label": "세종특별자치시",
+        "latitude": 36.480107,
+        "longitude": 127.289031,
+        "nx": 66,
+        "ny": 103
+      }
+    ]
+  },
+  {
+    "id": "gyeonggi",
+    "label": "경기도",
+    "locations": [
+      {
+        "id": "gyeonggi-수원시",
+        "label": "수원시",
+        "latitude": 37.301011,
+        "longitude": 127.012222,
+        "nx": 60,
+        "ny": 121
+      },
+      {
+        "id": "gyeonggi-성남시",
+        "label": "성남시",
+        "latitude": 37.447492,
+        "longitude": 127.147719,
+        "nx": 63,
+        "ny": 124
+      },
+      {
+        "id": "gyeonggi-의정부시",
+        "label": "의정부시",
+        "latitude": 37.735289,
+        "longitude": 127.035842,
+        "nx": 61,
+        "ny": 130
+      },
+      {
+        "id": "gyeonggi-안양시",
+        "label": "안양시",
+        "latitude": 37.3897,
+        "longitude": 126.953356,
+        "nx": 59,
+        "ny": 123
+      },
+      {
+        "id": "gyeonggi-부천시",
+        "label": "부천시",
+        "latitude": 37.503592,
+        "longitude": 126.766,
+        "nx": 56,
+        "ny": 125
+      },
+      {
+        "id": "gyeonggi-광명시",
+        "label": "광명시",
+        "latitude": 37.47575,
+        "longitude": 126.866708,
+        "nx": 58,
+        "ny": 125
+      },
+      {
+        "id": "gyeonggi-평택시",
+        "label": "평택시",
+        "latitude": 36.989439,
+        "longitude": 127.114656,
+        "nx": 62,
+        "ny": 114
+      },
+      {
+        "id": "gyeonggi-동두천시",
+        "label": "동두천시",
+        "latitude": 37.900917,
+        "longitude": 127.062653,
+        "nx": 61,
+        "ny": 134
+      },
+      {
+        "id": "gyeonggi-안산시",
+        "label": "안산시",
+        "latitude": 37.298519,
+        "longitude": 126.846819,
+        "nx": 58,
+        "ny": 121
+      },
+      {
+        "id": "gyeonggi-고양시",
+        "label": "고양시",
+        "latitude": 37.655908,
+        "longitude": 126.777056,
+        "nx": 56,
+        "ny": 129
+      },
+      {
+        "id": "gyeonggi-과천시",
+        "label": "과천시",
+        "latitude": 37.426372,
+        "longitude": 126.9898,
+        "nx": 60,
+        "ny": 124
+      },
+      {
+        "id": "gyeonggi-구리시",
+        "label": "구리시",
+        "latitude": 37.591625,
+        "longitude": 127.131864,
+        "nx": 62,
+        "ny": 127
+      },
+      {
+        "id": "gyeonggi-남양주시",
+        "label": "남양주시",
+        "latitude": 37.633178,
+        "longitude": 127.218633,
+        "nx": 64,
+        "ny": 128
+      },
+      {
+        "id": "gyeonggi-오산시",
+        "label": "오산시",
+        "latitude": 37.146914,
+        "longitude": 127.079642,
+        "nx": 62,
+        "ny": 118
+      },
+      {
+        "id": "gyeonggi-시흥시",
+        "label": "시흥시",
+        "latitude": 37.377319,
+        "longitude": 126.805078,
+        "nx": 57,
+        "ny": 123
+      },
+      {
+        "id": "gyeonggi-군포시",
+        "label": "군포시",
+        "latitude": 37.358658,
+        "longitude": 126.9375,
+        "nx": 59,
+        "ny": 122
+      },
+      {
+        "id": "gyeonggi-의왕시",
+        "label": "의왕시",
+        "latitude": 37.34195,
+        "longitude": 126.970389,
+        "nx": 60,
+        "ny": 122
+      },
+      {
+        "id": "gyeonggi-하남시",
+        "label": "하남시",
+        "latitude": 37.536497,
+        "longitude": 127.217,
+        "nx": 64,
+        "ny": 126
+      },
+      {
+        "id": "gyeonggi-용인시",
+        "label": "용인시",
+        "latitude": 37.231478,
+        "longitude": 127.203844,
+        "nx": 64,
+        "ny": 119
+      },
+      {
+        "id": "gyeonggi-파주시",
+        "label": "파주시",
+        "latitude": 37.757083,
+        "longitude": 126.781953,
+        "nx": 56,
+        "ny": 131
+      },
+      {
+        "id": "gyeonggi-이천시",
+        "label": "이천시",
+        "latitude": 37.275436,
+        "longitude": 127.443219,
+        "nx": 68,
+        "ny": 121
+      },
+      {
+        "id": "gyeonggi-안성시",
+        "label": "안성시",
+        "latitude": 37.005175,
+        "longitude": 127.281844,
+        "nx": 65,
+        "ny": 115
+      },
+      {
+        "id": "gyeonggi-김포시",
+        "label": "김포시",
+        "latitude": 37.612458,
+        "longitude": 126.717778,
+        "nx": 55,
+        "ny": 128
+      },
+      {
+        "id": "gyeonggi-화성시",
+        "label": "화성시",
+        "latitude": 37.196817,
+        "longitude": 126.833531,
+        "nx": 57,
+        "ny": 119
+      },
+      {
+        "id": "gyeonggi-광주시",
+        "label": "광주시",
+        "latitude": 37.414506,
+        "longitude": 127.257786,
+        "nx": 65,
+        "ny": 123
+      },
+      {
+        "id": "gyeonggi-양주시",
+        "label": "양주시",
+        "latitude": 37.78245,
+        "longitude": 127.047819,
+        "nx": 61,
+        "ny": 131
+      },
+      {
+        "id": "gyeonggi-포천시",
+        "label": "포천시",
+        "latitude": 37.892156,
+        "longitude": 127.202419,
+        "nx": 64,
+        "ny": 134
+      },
+      {
+        "id": "gyeonggi-여주시",
+        "label": "여주시",
+        "latitude": 37.295358,
+        "longitude": 127.639622,
+        "nx": 71,
+        "ny": 121
+      },
+      {
+        "id": "gyeonggi-연천군",
+        "label": "연천군",
+        "latitude": 38.093364,
+        "longitude": 127.077067,
+        "nx": 61,
+        "ny": 138
+      },
+      {
+        "id": "gyeonggi-가평군",
+        "label": "가평군",
+        "latitude": 37.828831,
+        "longitude": 127.511778,
+        "nx": 69,
+        "ny": 133
+      },
+      {
+        "id": "gyeonggi-양평군",
+        "label": "양평군",
+        "latitude": 37.488936,
+        "longitude": 127.489886,
+        "nx": 69,
+        "ny": 125
+      }
+    ]
+  },
+  {
+    "id": "gangwon",
+    "label": "강원특별자치도",
+    "locations": [
+      {
+        "id": "gangwon-춘천시",
+        "label": "춘천시",
+        "latitude": 37.878542,
+        "longitude": 127.732311,
+        "nx": 73,
+        "ny": 134
+      },
+      {
+        "id": "gangwon-원주시",
+        "label": "원주시",
+        "latitude": 37.339083,
+        "longitude": 127.922056,
+        "nx": 76,
+        "ny": 122
+      },
+      {
+        "id": "gangwon-강릉시",
+        "label": "강릉시",
+        "latitude": 37.749136,
+        "longitude": 128.878497,
+        "nx": 92,
+        "ny": 131
+      },
+      {
+        "id": "gangwon-동해시",
+        "label": "동해시",
+        "latitude": 37.521931,
+        "longitude": 129.116633,
+        "nx": 97,
+        "ny": 127
+      },
+      {
+        "id": "gangwon-태백시",
+        "label": "태백시",
+        "latitude": 37.161228,
+        "longitude": 128.987997,
+        "nx": 95,
+        "ny": 119
+      },
+      {
+        "id": "gangwon-속초시",
+        "label": "속초시",
+        "latitude": 38.204275,
+        "longitude": 128.594167,
+        "nx": 87,
+        "ny": 141
+      },
+      {
+        "id": "gangwon-삼척시",
+        "label": "삼척시",
+        "latitude": 37.447086,
+        "longitude": 129.167489,
+        "nx": 98,
+        "ny": 125
+      },
+      {
+        "id": "gangwon-홍천군",
+        "label": "홍천군",
+        "latitude": 37.694422,
+        "longitude": 127.890842,
+        "nx": 75,
+        "ny": 130
+      },
+      {
+        "id": "gangwon-횡성군",
+        "label": "횡성군",
+        "latitude": 37.488958,
+        "longitude": 127.987222,
+        "nx": 77,
+        "ny": 125
+      },
+      {
+        "id": "gangwon-영월군",
+        "label": "영월군",
+        "latitude": 37.180861,
+        "longitude": 128.464019,
+        "nx": 86,
+        "ny": 119
+      },
+      {
+        "id": "gangwon-평창군",
+        "label": "평창군",
+        "latitude": 37.367917,
+        "longitude": 128.392353,
+        "nx": 84,
+        "ny": 123
+      },
+      {
+        "id": "gangwon-정선군",
+        "label": "정선군",
+        "latitude": 37.377808,
+        "longitude": 128.663086,
+        "nx": 89,
+        "ny": 123
+      },
+      {
+        "id": "gangwon-철원군",
+        "label": "철원군",
+        "latitude": 38.144056,
+        "longitude": 127.315733,
+        "nx": 65,
+        "ny": 139
+      },
+      {
+        "id": "gangwon-화천군",
+        "label": "화천군",
+        "latitude": 38.103408,
+        "longitude": 127.710356,
+        "nx": 72,
+        "ny": 139
+      },
+      {
+        "id": "gangwon-양구군",
+        "label": "양구군",
+        "latitude": 38.107292,
+        "longitude": 127.992244,
+        "nx": 77,
+        "ny": 139
+      },
+      {
+        "id": "gangwon-인제군",
+        "label": "인제군",
+        "latitude": 38.066972,
+        "longitude": 128.172697,
+        "nx": 80,
+        "ny": 138
+      },
+      {
+        "id": "gangwon-고성군",
+        "label": "고성군",
+        "latitude": 38.377961,
+        "longitude": 128.470164,
+        "nx": 85,
+        "ny": 145
+      },
+      {
+        "id": "gangwon-양양군",
+        "label": "양양군",
+        "latitude": 38.072833,
+        "longitude": 128.621356,
+        "nx": 88,
+        "ny": 138
+      }
+    ]
+  },
+  {
+    "id": "chungbuk",
+    "label": "충청북도",
+    "locations": [
+      {
+        "id": "chungbuk-청주시",
+        "label": "청주시",
+        "latitude": 36.583997,
+        "longitude": 127.511731,
+        "nx": 69,
+        "ny": 106
+      },
+      {
+        "id": "chungbuk-충주시",
+        "label": "충주시",
+        "latitude": 36.988181,
+        "longitude": 127.928144,
+        "nx": 76,
+        "ny": 114
+      },
+      {
+        "id": "chungbuk-제천시",
+        "label": "제천시",
+        "latitude": 37.129769,
+        "longitude": 128.193153,
+        "nx": 81,
+        "ny": 118
+      },
+      {
+        "id": "chungbuk-보은군",
+        "label": "보은군",
+        "latitude": 36.486533,
+        "longitude": 127.731608,
+        "nx": 73,
+        "ny": 103
+      },
+      {
+        "id": "chungbuk-옥천군",
+        "label": "옥천군",
+        "latitude": 36.30355,
+        "longitude": 127.573633,
+        "nx": 71,
+        "ny": 99
+      },
+      {
+        "id": "chungbuk-영동군",
+        "label": "영동군",
+        "latitude": 36.172058,
+        "longitude": 127.785611,
+        "nx": 74,
+        "ny": 97
+      },
+      {
+        "id": "chungbuk-증평군",
+        "label": "증평군",
+        "latitude": 36.782181,
+        "longitude": 127.583289,
+        "nx": 71,
+        "ny": 110
+      },
+      {
+        "id": "chungbuk-진천군",
+        "label": "진천군",
+        "latitude": 36.852539,
+        "longitude": 127.437644,
+        "nx": 68,
+        "ny": 111
+      },
+      {
+        "id": "chungbuk-괴산군",
+        "label": "괴산군",
+        "latitude": 36.812431,
+        "longitude": 127.788831,
+        "nx": 74,
+        "ny": 111
+      },
+      {
+        "id": "chungbuk-음성군",
+        "label": "음성군",
+        "latitude": 36.937406,
+        "longitude": 127.692622,
+        "nx": 72,
+        "ny": 113
+      },
+      {
+        "id": "chungbuk-단양군",
+        "label": "단양군",
+        "latitude": 36.981781,
+        "longitude": 128.367842,
+        "nx": 84,
+        "ny": 115
+      }
+    ]
+  },
+  {
+    "id": "chungnam",
+    "label": "충청남도",
+    "locations": [
+      {
+        "id": "chungnam-천안시",
+        "label": "천안시",
+        "latitude": 36.804125,
+        "longitude": 127.152467,
+        "nx": 63,
+        "ny": 110
+      },
+      {
+        "id": "chungnam-공주시",
+        "label": "공주시",
+        "latitude": 36.443614,
+        "longitude": 127.121119,
+        "nx": 63,
+        "ny": 102
+      },
+      {
+        "id": "chungnam-보령시",
+        "label": "보령시",
+        "latitude": 36.330575,
+        "longitude": 126.614886,
+        "nx": 54,
+        "ny": 100
+      },
+      {
+        "id": "chungnam-아산시",
+        "label": "아산시",
+        "latitude": 36.787106,
+        "longitude": 127.004642,
+        "nx": 60,
+        "ny": 110
+      },
+      {
+        "id": "chungnam-서산시",
+        "label": "서산시",
+        "latitude": 36.782097,
+        "longitude": 126.452164,
+        "nx": 51,
+        "ny": 110
+      },
+      {
+        "id": "chungnam-논산시",
+        "label": "논산시",
+        "latitude": 36.184203,
+        "longitude": 127.100911,
+        "nx": 62,
+        "ny": 97
+      },
+      {
+        "id": "chungnam-계룡시",
+        "label": "계룡시",
+        "latitude": 36.271836,
+        "longitude": 127.250931,
+        "nx": 65,
+        "ny": 99
+      },
+      {
+        "id": "chungnam-당진시",
+        "label": "당진시",
+        "latitude": 36.89075,
+        "longitude": 126.630253,
+        "nx": 54,
+        "ny": 112
+      },
+      {
+        "id": "chungnam-금산군",
+        "label": "금산군",
+        "latitude": 36.105869,
+        "longitude": 127.490308,
+        "nx": 69,
+        "ny": 95
+      },
+      {
+        "id": "chungnam-부여군",
+        "label": "부여군",
+        "latitude": 36.272822,
+        "longitude": 126.911864,
+        "nx": 59,
+        "ny": 99
+      },
+      {
+        "id": "chungnam-서천군",
+        "label": "서천군",
+        "latitude": 36.077406,
+        "longitude": 126.693889,
+        "nx": 55,
+        "ny": 94
+      },
+      {
+        "id": "chungnam-청양군",
+        "label": "청양군",
+        "latitude": 36.456269,
+        "longitude": 126.804256,
+        "nx": 57,
+        "ny": 103
+      },
+      {
+        "id": "chungnam-홍성군",
+        "label": "홍성군",
+        "latitude": 36.598361,
+        "longitude": 126.662908,
+        "nx": 55,
+        "ny": 106
+      },
+      {
+        "id": "chungnam-예산군",
+        "label": "예산군",
+        "latitude": 36.679806,
+        "longitude": 126.850875,
+        "nx": 58,
+        "ny": 107
+      },
+      {
+        "id": "chungnam-태안군",
+        "label": "태안군",
+        "latitude": 36.742667,
+        "longitude": 126.299975,
+        "nx": 48,
+        "ny": 109
+      }
+    ]
+  },
+  {
+    "id": "jeonbuk",
+    "label": "전북특별자치도",
+    "locations": [
+      {
+        "id": "jeonbuk-전주시",
+        "label": "전주시",
+        "latitude": 35.809189,
+        "longitude": 127.121919,
+        "nx": 63,
+        "ny": 89
+      },
+      {
+        "id": "jeonbuk-군산시",
+        "label": "군산시",
+        "latitude": 35.964642,
+        "longitude": 126.738844,
+        "nx": 56,
+        "ny": 92
+      },
+      {
+        "id": "jeonbuk-익산시",
+        "label": "익산시",
+        "latitude": 35.945275,
+        "longitude": 126.959853,
+        "nx": 60,
+        "ny": 91
+      },
+      {
+        "id": "jeonbuk-정읍시",
+        "label": "정읍시",
+        "latitude": 35.566872,
+        "longitude": 126.858111,
+        "nx": 58,
+        "ny": 83
+      },
+      {
+        "id": "jeonbuk-남원시",
+        "label": "남원시",
+        "latitude": 35.413256,
+        "longitude": 127.3925,
+        "nx": 68,
+        "ny": 80
+      },
+      {
+        "id": "jeonbuk-김제시",
+        "label": "김제시",
+        "latitude": 35.800575,
+        "longitude": 126.882753,
+        "nx": 59,
+        "ny": 88
+      },
+      {
+        "id": "jeonbuk-완주군",
+        "label": "완주군",
+        "latitude": 35.842969,
+        "longitude": 127.149597,
+        "nx": 63,
+        "ny": 89
+      },
+      {
+        "id": "jeonbuk-진안군",
+        "label": "진안군",
+        "latitude": 35.788719,
+        "longitude": 127.426967,
+        "nx": 68,
+        "ny": 88
+      },
+      {
+        "id": "jeonbuk-무주군",
+        "label": "무주군",
+        "latitude": 36.003828,
+        "longitude": 127.662867,
+        "nx": 72,
+        "ny": 93
+      },
+      {
+        "id": "jeonbuk-장수군",
+        "label": "장수군",
+        "latitude": 35.644297,
+        "longitude": 127.5233,
+        "nx": 70,
+        "ny": 85
+      },
+      {
+        "id": "jeonbuk-임실군",
+        "label": "임실군",
+        "latitude": 35.608064,
+        "longitude": 127.284753,
+        "nx": 66,
+        "ny": 84
+      },
+      {
+        "id": "jeonbuk-순창군",
+        "label": "순창군",
+        "latitude": 35.371389,
+        "longitude": 127.139631,
+        "nx": 63,
+        "ny": 79
+      },
+      {
+        "id": "jeonbuk-고창군",
+        "label": "고창군",
+        "latitude": 35.432739,
+        "longitude": 126.704108,
+        "nx": 56,
+        "ny": 80
+      },
+      {
+        "id": "jeonbuk-부안군",
+        "label": "부안군",
+        "latitude": 35.728533,
+        "longitude": 126.735678,
+        "nx": 56,
+        "ny": 87
+      }
+    ]
+  },
+  {
+    "id": "jeonnam",
+    "label": "전라남도",
+    "locations": [
+      {
+        "id": "jeonnam-목포시",
+        "label": "목포시",
+        "latitude": 34.808789,
+        "longitude": 126.394419,
+        "nx": 50,
+        "ny": 67
+      },
+      {
+        "id": "jeonnam-여수시",
+        "label": "여수시",
+        "latitude": 34.757311,
+        "longitude": 127.664386,
+        "nx": 73,
+        "ny": 66
+      },
+      {
+        "id": "jeonnam-순천시",
+        "label": "순천시",
+        "latitude": 34.947606,
+        "longitude": 127.489331,
+        "nx": 70,
+        "ny": 70
+      },
+      {
+        "id": "jeonnam-나주시",
+        "label": "나주시",
+        "latitude": 35.012839,
+        "longitude": 126.712867,
+        "nx": 56,
+        "ny": 71
+      },
+      {
+        "id": "jeonnam-광양시",
+        "label": "광양시",
+        "latitude": 34.937536,
+        "longitude": 127.698178,
+        "nx": 73,
+        "ny": 70
+      },
+      {
+        "id": "jeonnam-담양군",
+        "label": "담양군",
+        "latitude": 35.318125,
+        "longitude": 126.990164,
+        "nx": 61,
+        "ny": 78
+      },
+      {
+        "id": "jeonnam-곡성군",
+        "label": "곡성군",
+        "latitude": 35.278956,
+        "longitude": 127.294108,
+        "nx": 66,
+        "ny": 77
+      },
+      {
+        "id": "jeonnam-구례군",
+        "label": "구례군",
+        "latitude": 35.199458,
+        "longitude": 127.464933,
+        "nx": 69,
+        "ny": 75
+      },
+      {
+        "id": "jeonnam-고흥군",
+        "label": "고흥군",
+        "latitude": 34.608069,
+        "longitude": 127.287056,
+        "nx": 66,
+        "ny": 62
+      },
+      {
+        "id": "jeonnam-보성군",
+        "label": "보성군",
+        "latitude": 34.768333,
+        "longitude": 127.082089,
+        "nx": 62,
+        "ny": 66
+      },
+      {
+        "id": "jeonnam-화순군",
+        "label": "화순군",
+        "latitude": 35.061481,
+        "longitude": 126.988567,
+        "nx": 61,
+        "ny": 72
+      },
+      {
+        "id": "jeonnam-장흥군",
+        "label": "장흥군",
+        "latitude": 34.678525,
+        "longitude": 126.909108,
+        "nx": 59,
+        "ny": 64
+      },
+      {
+        "id": "jeonnam-강진군",
+        "label": "강진군",
+        "latitude": 34.638911,
+        "longitude": 126.769197,
+        "nx": 57,
+        "ny": 63
+      },
+      {
+        "id": "jeonnam-해남군",
+        "label": "해남군",
+        "latitude": 34.570436,
+        "longitude": 126.601289,
+        "nx": 54,
+        "ny": 61
+      },
+      {
+        "id": "jeonnam-영암군",
+        "label": "영암군",
+        "latitude": 34.796989,
+        "longitude": 126.698619,
+        "nx": 56,
+        "ny": 66
+      },
+      {
+        "id": "jeonnam-무안군",
+        "label": "무안군",
+        "latitude": 34.987369,
+        "longitude": 126.4837,
+        "nx": 52,
+        "ny": 71
+      },
+      {
+        "id": "jeonnam-함평군",
+        "label": "함평군",
+        "latitude": 35.062744,
+        "longitude": 126.518619,
+        "nx": 52,
+        "ny": 72
+      },
+      {
+        "id": "jeonnam-영광군",
+        "label": "영광군",
+        "latitude": 35.274167,
+        "longitude": 126.514086,
+        "nx": 52,
+        "ny": 77
+      },
+      {
+        "id": "jeonnam-장성군",
+        "label": "장성군",
+        "latitude": 35.298811,
+        "longitude": 126.786975,
+        "nx": 57,
+        "ny": 77
+      },
+      {
+        "id": "jeonnam-완도군",
+        "label": "완도군",
+        "latitude": 34.307853,
+        "longitude": 126.757097,
+        "nx": 57,
+        "ny": 56
+      },
+      {
+        "id": "jeonnam-진도군",
+        "label": "진도군",
+        "latitude": 34.48375,
+        "longitude": 126.265544,
+        "nx": 48,
+        "ny": 59
+      },
+      {
+        "id": "jeonnam-신안군",
+        "label": "신안군",
+        "latitude": 34.789811,
+        "longitude": 126.381731,
+        "nx": 50,
+        "ny": 66
+      }
+    ]
+  },
+  {
+    "id": "gyeongbuk",
+    "label": "경상북도",
+    "locations": [
+      {
+        "id": "gyeongbuk-포항시",
+        "label": "포항시",
+        "latitude": 36.005686,
+        "longitude": 129.361667,
+        "nx": 102,
+        "ny": 94
+      },
+      {
+        "id": "gyeongbuk-경주시",
+        "label": "경주시",
+        "latitude": 35.853169,
+        "longitude": 129.227022,
+        "nx": 100,
+        "ny": 91
+      },
+      {
+        "id": "gyeongbuk-김천시",
+        "label": "김천시",
+        "latitude": 36.136897,
+        "longitude": 128.1158,
+        "nx": 80,
+        "ny": 96
+      },
+      {
+        "id": "gyeongbuk-안동시",
+        "label": "안동시",
+        "latitude": 36.565464,
+        "longitude": 128.731622,
+        "nx": 91,
+        "ny": 106
+      },
+      {
+        "id": "gyeongbuk-구미시",
+        "label": "구미시",
+        "latitude": 36.11655,
+        "longitude": 128.346778,
+        "nx": 84,
+        "ny": 96
+      },
+      {
+        "id": "gyeongbuk-영주시",
+        "label": "영주시",
+        "latitude": 36.802936,
+        "longitude": 128.626344,
+        "nx": 89,
+        "ny": 111
+      },
+      {
+        "id": "gyeongbuk-영천시",
+        "label": "영천시",
+        "latitude": 35.970053,
+        "longitude": 128.940775,
+        "nx": 95,
+        "ny": 93
+      },
+      {
+        "id": "gyeongbuk-상주시",
+        "label": "상주시",
+        "latitude": 36.407969,
+        "longitude": 128.161264,
+        "nx": 81,
+        "ny": 102
+      },
+      {
+        "id": "gyeongbuk-문경시",
+        "label": "문경시",
+        "latitude": 36.583631,
+        "longitude": 128.189019,
+        "nx": 81,
+        "ny": 106
+      },
+      {
+        "id": "gyeongbuk-경산시",
+        "label": "경산시",
+        "latitude": 35.822089,
+        "longitude": 128.743464,
+        "nx": 91,
+        "ny": 90
+      },
+      {
+        "id": "gyeongbuk-군위군",
+        "label": "군위군",
+        "latitude": 36.239997,
+        "longitude": 128.575078,
+        "nx": 88,
+        "ny": 99
+      },
+      {
+        "id": "gyeongbuk-의성군",
+        "label": "의성군",
+        "latitude": 36.349758,
+        "longitude": 128.699364,
+        "nx": 90,
+        "ny": 101
+      },
+      {
+        "id": "gyeongbuk-청송군",
+        "label": "청송군",
+        "latitude": 36.433292,
+        "longitude": 129.0594,
+        "nx": 97,
+        "ny": 103
+      },
+      {
+        "id": "gyeongbuk-영양군",
+        "label": "영양군",
+        "latitude": 36.664275,
+        "longitude": 129.114622,
+        "nx": 97,
+        "ny": 108
+      },
+      {
+        "id": "gyeongbuk-영덕군",
+        "label": "영덕군",
+        "latitude": 36.412103,
+        "longitude": 129.368356,
+        "nx": 102,
+        "ny": 103
+      },
+      {
+        "id": "gyeongbuk-청도군",
+        "label": "청도군",
+        "latitude": 35.644311,
+        "longitude": 128.7362,
+        "nx": 91,
+        "ny": 86
+      },
+      {
+        "id": "gyeongbuk-고령군",
+        "label": "고령군",
+        "latitude": 35.722986,
+        "longitude": 128.265022,
+        "nx": 83,
+        "ny": 87
+      },
+      {
+        "id": "gyeongbuk-성주군",
+        "label": "성주군",
+        "latitude": 35.916211,
+        "longitude": 128.285153,
+        "nx": 83,
+        "ny": 91
+      },
+      {
+        "id": "gyeongbuk-칠곡군",
+        "label": "칠곡군",
+        "latitude": 35.992547,
+        "longitude": 128.403797,
+        "nx": 85,
+        "ny": 93
+      },
+      {
+        "id": "gyeongbuk-예천군",
+        "label": "예천군",
+        "latitude": 36.65495,
+        "longitude": 128.455022,
+        "nx": 86,
+        "ny": 107
+      },
+      {
+        "id": "gyeongbuk-봉화군",
+        "label": "봉화군",
+        "latitude": 36.890261,
+        "longitude": 128.734875,
+        "nx": 90,
+        "ny": 113
+      },
+      {
+        "id": "gyeongbuk-울진군",
+        "label": "울진군",
+        "latitude": 36.990186,
+        "longitude": 129.402786,
+        "nx": 102,
+        "ny": 115
+      },
+      {
+        "id": "gyeongbuk-울릉군",
+        "label": "울릉군",
+        "latitude": 37.480575,
+        "longitude": 130.903789,
+        "nx": 127,
+        "ny": 127
+      }
+    ]
+  },
+  {
+    "id": "gyeongnam",
+    "label": "경상남도",
+    "locations": [
+      {
+        "id": "gyeongnam-창원시",
+        "label": "창원시",
+        "latitude": 35.254003,
+        "longitude": 128.640154,
+        "nx": 90,
+        "ny": 77
+      },
+      {
+        "id": "gyeongnam-진주시",
+        "label": "진주시",
+        "latitude": 35.177033,
+        "longitude": 128.11,
+        "nx": 81,
+        "ny": 75
+      },
+      {
+        "id": "gyeongnam-통영시",
+        "label": "통영시",
+        "latitude": 34.851258,
+        "longitude": 128.435278,
+        "nx": 87,
+        "ny": 68
+      },
+      {
+        "id": "gyeongnam-사천시",
+        "label": "사천시",
+        "latitude": 35.000283,
+        "longitude": 128.066778,
+        "nx": 80,
+        "ny": 71
+      },
+      {
+        "id": "gyeongnam-김해시",
+        "label": "김해시",
+        "latitude": 35.225506,
+        "longitude": 128.891667,
+        "nx": 95,
+        "ny": 77
+      },
+      {
+        "id": "gyeongnam-밀양시",
+        "label": "밀양시",
+        "latitude": 35.500778,
+        "longitude": 128.748944,
+        "nx": 92,
+        "ny": 83
+      },
+      {
+        "id": "gyeongnam-거제시",
+        "label": "거제시",
+        "latitude": 34.877358,
+        "longitude": 128.623356,
+        "nx": 90,
+        "ny": 69
+      },
+      {
+        "id": "gyeongnam-양산시",
+        "label": "양산시",
+        "latitude": 35.331928,
+        "longitude": 129.039411,
+        "nx": 97,
+        "ny": 79
+      },
+      {
+        "id": "gyeongnam-의령군",
+        "label": "의령군",
+        "latitude": 35.319119,
+        "longitude": 128.263822,
+        "nx": 83,
+        "ny": 78
+      },
+      {
+        "id": "gyeongnam-함안군",
+        "label": "함안군",
+        "latitude": 35.269406,
+        "longitude": 128.408708,
+        "nx": 86,
+        "ny": 77
+      },
+      {
+        "id": "gyeongnam-창녕군",
+        "label": "창녕군",
+        "latitude": 35.541536,
+        "longitude": 128.494533,
+        "nx": 87,
+        "ny": 83
+      },
+      {
+        "id": "gyeongnam-고성군",
+        "label": "고성군",
+        "latitude": 34.9699,
+        "longitude": 128.324542,
+        "nx": 85,
+        "ny": 71
+      },
+      {
+        "id": "gyeongnam-남해군",
+        "label": "남해군",
+        "latitude": 34.834558,
+        "longitude": 127.894467,
+        "nx": 77,
+        "ny": 68
+      },
+      {
+        "id": "gyeongnam-하동군",
+        "label": "하동군",
+        "latitude": 35.064203,
+        "longitude": 127.753431,
+        "nx": 74,
+        "ny": 73
+      },
+      {
+        "id": "gyeongnam-산청군",
+        "label": "산청군",
+        "latitude": 35.412492,
+        "longitude": 127.875619,
+        "nx": 76,
+        "ny": 80
+      },
+      {
+        "id": "gyeongnam-함양군",
+        "label": "함양군",
+        "latitude": 35.517469,
+        "longitude": 127.727419,
+        "nx": 74,
+        "ny": 82
+      },
+      {
+        "id": "gyeongnam-거창군",
+        "label": "거창군",
+        "latitude": 35.683625,
+        "longitude": 127.911656,
+        "nx": 77,
+        "ny": 86
+      },
+      {
+        "id": "gyeongnam-합천군",
+        "label": "합천군",
+        "latitude": 35.563617,
+        "longitude": 128.167931,
+        "nx": 81,
+        "ny": 84
+      }
+    ]
+  },
+  {
+    "id": "jeju",
+    "label": "제주특별자치도",
+    "locations": [
+      {
+        "id": "jeju-제주시",
+        "label": "제주시",
+        "latitude": 33.496311,
+        "longitude": 126.533208,
+        "nx": 53,
+        "ny": 38
+      },
+      {
+        "id": "jeju-서귀포시",
+        "label": "서귀포시",
+        "latitude": 33.25235,
+        "longitude": 126.512556,
+        "nx": 52,
+        "ny": 33
+      }
+    ]
+  }
+] as const satisfies readonly ProvinceDefinition[];
+
+export type Province = (typeof KOREA_PROVINCES)[number];
+export type ProvinceId = Province['id'];
+export type Location = Province['locations'][number];
+export type LocationId = Location['id'];
+
+export const PROVINCE_MAP: Record<ProvinceId, Province> = Object.fromEntries(
+  KOREA_PROVINCES.map((province) => [province.id, province] as const)
+) as Record<ProvinceId, Province>;
+
+export const LOCATION_MAP: Record<LocationId, Location> = Object.fromEntries(
+  KOREA_PROVINCES.flatMap((province) =>
+    province.locations.map((location) => [location.id, location] as const)
+  )
+) as Record<LocationId, Location>;
+
+export const PROVINCE_OPTIONS = KOREA_PROVINCES.map((province) => ({
+  value: province.id,
+  label: province.label,
+}));
+
+export const getLocationsByProvince = (provinceId: ProvinceId): readonly Location[] =>
+  PROVINCE_MAP[provinceId]?.locations ?? [];
