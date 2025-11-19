@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { GoogleGenAI } from '@google/genai';
+import { GoogleGenAI, GenerateContentResponse } from '@google/genai';
 import {
   type ForecastDay,
   type LocationId,
@@ -741,7 +741,7 @@ const requestTextRecommendation = async (
 
   const payload = buildTextPromptPayload(body, weather);
 
-  const response = await genAI.models.generateContent({
+  const response: GenerateContentResponse = await genAI.models.generateContent({
     model: TEXT_MODEL,
     contents: [
       {
@@ -881,10 +881,11 @@ const requestImage = async (
 
   try {
     const prompt = buildImagePrompt(body, outfit, weather);
-    const response = await genAI.models.generateContent({
-      model: IMAGE_MODEL,
-      contents: [{ role: 'user', parts: [{ text: prompt }] }],
-    });
+    const response: GenerateContentResponse =
+      await genAI.models.generateContent({
+        model: IMAGE_MODEL,
+        contents: [{ role: 'user', parts: [{ text: prompt }] }],
+      });
 
     const primaryParts = response.candidates?.[0]?.content?.parts ?? [];
     const alternativeParts =
