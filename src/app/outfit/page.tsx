@@ -834,9 +834,14 @@ export default function OutfitPage() {
                       <span>{statusMessage}</span>
                     </div>
                   ) : (
-                    <span className='text-sm text-muted-foreground'>
-                      필수 입력란(*)을 모두 채워주세요.
-                    </span>
+                    <div className='flex flex-col gap-2'>
+                      <label className='text-sm font-medium text-foreground'>
+                        생성하기
+                      </label>
+                      <p className='text-xs text-muted-foreground'>
+                        필수 입력란(*)을 모두 채워주세요.
+                      </p>
+                    </div>
                   )}
 
                   <div className='flex gap-2'>
