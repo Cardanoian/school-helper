@@ -798,30 +798,74 @@ export default function OutfitPage() {
                 )}
               </div>
 
-              <div className='flex flex-col gap-2'>
-                <label className='text-sm font-medium text-foreground'>
-                  온도 민감도
-                </label>
-                <p className='text-xs text-muted-foreground'>
-                  어떤 날씨를 참기 힘든지 골라 주세요.
-                </p>
-                <select
-                  value={formState.sensitivity}
-                  onChange={(event) =>
-                    handleSelect(
-                      'sensitivity',
-                      event.target.value as Sensitivity
-                    )
-                  }
-                  className='w-full rounded-lg border border-input bg-background px-3 py-2 text-sm transition focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30'
-                >
-                  <option value=''>선택하지 않음</option>
-                  {SENSITIVITY_OPTIONS.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
+              <div className='flex flex-col gap-6 md:flex-row md:items-start md:gap-4'>
+                <div className='flex flex-1 flex-col gap-2'>
+                  <label className='text-sm font-medium text-foreground'>
+                    온도 민감도
+                  </label>
+                  <p className='text-xs text-muted-foreground'>
+                    어떤 날씨를 참기 힘든지 골라 주세요.
+                  </p>
+                  <select
+                    value={formState.sensitivity}
+                    onChange={(event) =>
+                      handleSelect(
+                        'sensitivity',
+                        event.target.value as Sensitivity
+                      )
+                    }
+                    className='w-full rounded-lg border border-input bg-background px-3 py-2 text-sm transition focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30'
+                  >
+                    <option value=''>선택하지 않음</option>
+                    {SENSITIVITY_OPTIONS.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className='flex flex-col gap-3 md:shrink-0'>
+                  {statusMessage ? (
+                    <div className='inline-flex items-center gap-2 text-sm text-muted-foreground'>
+                      {isLoading ? (
+                        <Loader2 className='size-4 animate-spin text-primary' />
+                      ) : null}
+                      <span>{statusMessage}</span>
+                    </div>
+                  ) : (
+                    <span className='text-sm text-muted-foreground'>
+                      필수 입력란(*)을 모두 채워주세요.
+                    </span>
+                  )}
+
+                  <div className='flex gap-2'>
+                    <Button
+                      type='button'
+                      variant='outline'
+                      onClick={handleReset}
+                      className='inline-flex items-center gap-2'
+                    >
+                      <RefreshCcw className='size-4' />
+                      초기화
+                    </Button>
+
+                    <Button
+                      type='submit'
+                      disabled={isSubmitDisabled}
+                      className='inline-flex items-center gap-2 disabled:opacity-60'
+                    >
+                      {isLoading ? (
+                        <>
+                          <Loader2 className='size-4 animate-spin' />
+                          추천 생성 중
+                        </>
+                      ) : (
+                        '추천 받기'
+                      )}
+                    </Button>
+                  </div>
+                </div>
               </div>
 
               {errorMessage ? (
@@ -829,48 +873,6 @@ export default function OutfitPage() {
                   {errorMessage}
                 </div>
               ) : null}
-
-              <div className='flex flex-col gap-3'>
-                {statusMessage ? (
-                  <div className='inline-flex items-center gap-2 text-sm text-muted-foreground'>
-                    {isLoading ? (
-                      <Loader2 className='size-4 animate-spin text-primary' />
-                    ) : null}
-                    <span>{statusMessage}</span>
-                  </div>
-                ) : (
-                  <span className='text-sm text-muted-foreground'>
-                    필수 입력란(*)을 모두 채워주세요.
-                  </span>
-                )}
-
-                <div className='flex gap-2'>
-                  <Button
-                    type='button'
-                    variant='outline'
-                    onClick={handleReset}
-                    className='inline-flex items-center gap-2'
-                  >
-                    <RefreshCcw className='size-4' />
-                    초기화
-                  </Button>
-
-                  <Button
-                    type='submit'
-                    disabled={isSubmitDisabled}
-                    className='inline-flex items-center gap-2 disabled:opacity-60'
-                  >
-                    {isLoading ? (
-                      <>
-                        <Loader2 className='size-4 animate-spin' />
-                        추천 생성 중
-                      </>
-                    ) : (
-                      '추천 받기'
-                    )}
-                  </Button>
-                </div>
-              </div>
             </form>
           </section>
 
