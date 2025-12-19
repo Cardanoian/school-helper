@@ -24,7 +24,6 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import {
   type Activity,
-  type ForecastDay,
   type Gender,
   type OutfitFormFieldErrors,
   type OutfitFormState,
@@ -70,12 +69,6 @@ const SENSITIVITY_OPTIONS: SelectOption<Sensitivity>[] = [
   { value: 'cold', label: '추움' },
   { value: 'neutral', label: '보통' },
   { value: 'warm', label: '더움' },
-];
-
-const FORECAST_DAY_OPTIONS: SelectOption<ForecastDay>[] = [
-  { value: 'today', label: '오늘' },
-  { value: 'tomorrow', label: '내일' },
-  { value: 'dayAfter', label: '모레' },
 ];
 
 const FAVORITE_COLOR_OPTIONS: SelectOption[] = [
@@ -256,7 +249,7 @@ export default function OutfitPage() {
         sensitivity: formState.sensitivity || null,
         provinceId: formState.provinceId,
         locationId: formState.locationId,
-        forecastDay: formState.forecastDay,
+        forecastDay: 'today',
       };
 
       const response = await fetch('/api/outfit', {
@@ -740,66 +733,6 @@ export default function OutfitPage() {
                 </p>
               </div>
 
-              <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
-                <div className='flex flex-col gap-2'>
-                  <label className='text-sm font-medium text-foreground'>
-                    온도 민감도
-                  </label>
-                  <p className='text-xs text-muted-foreground'>
-                    어떤 날씨를 참기 힘든지 골라 주세요.
-                  </p>
-                  <select
-                    value={formState.sensitivity}
-                    onChange={(event) =>
-                      handleSelect(
-                        'sensitivity',
-                        event.target.value as Sensitivity
-                      )
-                    }
-                    className='w-full rounded-lg border border-input bg-background px-3 py-2 text-sm transition focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30'
-                  >
-                    <option value=''>선택하지 않음</option>
-                    {SENSITIVITY_OPTIONS.map((option) => (
-                      <option key={option.value} value={option.value}>
-                        {option.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div className='flex flex-col gap-2'>
-                  <label className='text-sm font-medium text-foreground'>
-                    추천 날짜
-                  </label>
-                  <p className='text-xs text-muted-foreground'>
-                    오늘, 내일, 모레 중 하나를 선택해 주세요.
-                  </p>
-                  <div className='grid grid-cols-3 gap-2'>
-                    {FORECAST_DAY_OPTIONS.map((option) => {
-                      const isSelected = formState.forecastDay === option.value;
-                      return (
-                        <button
-                          key={option.value}
-                          type='button'
-                          onClick={() =>
-                            handleSelect('forecastDay', option.value)
-                          }
-                          className={cn(
-                            'rounded-lg border border-border px-3 py-2 text-sm transition focus:outline-none focus:ring-2 focus:ring-primary/40',
-                            isSelected
-                              ? 'border-primary bg-primary/10 text-primary'
-                              : 'hover:border-primary/50'
-                          )}
-                          aria-pressed={isSelected}
-                        >
-                          {option.label}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-
               <div className='flex flex-col gap-2'>
                 <label className='text-sm font-medium text-foreground'>
                   지역 <span className='text-destructive'>*</span>
@@ -865,13 +798,39 @@ export default function OutfitPage() {
                 )}
               </div>
 
+              <div className='flex flex-col gap-2'>
+                <label className='text-sm font-medium text-foreground'>
+                  온도 민감도
+                </label>
+                <p className='text-xs text-muted-foreground'>
+                  어떤 날씨를 참기 힘든지 골라 주세요.
+                </p>
+                <select
+                  value={formState.sensitivity}
+                  onChange={(event) =>
+                    handleSelect(
+                      'sensitivity',
+                      event.target.value as Sensitivity
+                    )
+                  }
+                  className='w-full rounded-lg border border-input bg-background px-3 py-2 text-sm transition focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30'
+                >
+                  <option value=''>선택하지 않음</option>
+                  {SENSITIVITY_OPTIONS.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
               {errorMessage ? (
                 <div className='rounded-lg border border-destructive/40 bg-destructive/5 px-4 py-3 text-sm text-destructive'>
                   {errorMessage}
                 </div>
               ) : null}
 
-              <div className='flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between'>
+              <div className='flex flex-col gap-3'>
                 {statusMessage ? (
                   <div className='inline-flex items-center gap-2 text-sm text-muted-foreground'>
                     {isLoading ? (
